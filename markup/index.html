@@ -4,15 +4,18 @@
         <title>Portfolio Markup Developer</title>
         <meta charset = "utf-8">
         <link rel="stylesheet" href="css/style.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Source+Serif+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     </head>
     <body id="body">
     	<div class="wrapper">    		
     		<header>
     			<div class="heading">
-    				<h1>Sasha Kovalenko</h1>
+    				<h1>Tanya Bortnik</h1>
     				<button onclick="darkToggle()" class="btn">Try it</button>
     			</div>
-    			<button class="btn-burger">burger</button>
+    			<a href="#" class="btn-burger">
+                    <span class="btn-burger-lines"></span>
+                  </a>
     			<nav class="menu">
     				<ul>
     					<li><a href="">Skills</a></li>
@@ -28,7 +31,7 @@
 					</div>	
     			</div>
     			<div class="hero">
-    				<strong class="hero-text">WELCOME TEXT</strong>
+    				<strong class="hero-text">a markup developer's portfolio</strong>
     				<div class="decor"></div>
     			</div>
     			<ul class="links">
@@ -37,9 +40,20 @@
 					<li><a href="">facebook</a></li>
 				</ul>
     		</header>
-    		<section class="parallax"></section>
+    		<section class="parallax">
+                <!-- <img src="img/dev.jpeg" alt="">       -->
+            </section>
     		<section class="skills">
-    			<h2>SKILLS</h2>
+    			<h2>How well do I perform?</h2>
+                <div class='skills-area'>
+                    <p>HTML</p>
+                    <div><div class='skill-level' style="width:60%">60%</div></div>
+                    <p>CSS</p>
+                    <div><div class='skill-level' style="width:20%">20%</div></div>
+                    <p>JS</p>
+                    <div><div class='skill-level' style="width:10%">10%</div></div>
+                </div>
+
     		</section>
     		<section class="projects">
     			<h2>PROJECTS</h2>
@@ -52,7 +66,12 @@
 	    	<p class="en">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Et malesuada fames ac turpis egestas sed. Sit amet nisl suscipit adipiscing bibendum est ultricies. Et magnis dis parturient montes nascetur.</p>
 	    	<p class="ua">Фраза “Lorem ipsum” походить із трактату Цицерона de Finibus Bonorum et Malorum (Про межі добра та зла). Перекручену фразу “Lorem ipsum …” узято з тексту “Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit …”, що переводиться як “Ніхто не любить свій біль, ніхто не шукає його й ніхто не хоче його мати. Просто тому, що це біль…”. Це макетний текст, який використовувався з 1500-х років як заповнювач контенту. Замість того, щоб писати “свій контент” знову і знову, lorem ipsum забезпечує напів-нормальний розподіл слів і літер. Він використовується багатьма редакторами веб-сторінок в якості тексту за замовчуванням для моделей сайтів.</p>
 		</div>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="js/burger.js"></script>
+
+        <script src="js/skrollr.min.js"></script>
 		<script>
+            var s = skrollr.init();
 			function darkToggle() {
 			   var element = document.getElementById("body");
 			   element.classList.toggle("dark-theme");
