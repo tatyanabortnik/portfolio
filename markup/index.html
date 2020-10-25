@@ -7,14 +7,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Source+Serif+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     </head>
     <body id="body">
-    	<div class="wrapper">    		
+    	<div class="wrapper" id="wrapper">    		
     		<header>
     			<div class="heading">
     				<h1>Tanya Bortnik</h1>
-    				<button onclick="darkToggle()" class="btn">Try it</button>
+    				<button onclick="darkToggle()" class="btn">Enable fanciness</button>
     			</div>
-    			<a href="#" class="btn-burger">
+    			<a href="#" class="btn-burger" onclick="menuToggle()">
                     <span class="btn-burger-lines"></span>
+                    <span class="btn-burger-txt">MENU</span>
                   </a>
     			<nav class="menu">
     				<ul>
@@ -37,6 +38,17 @@
     			<ul class="links">
                     <div class="sprite">
                         <svg width="0" height="0" class="hidden">
+                            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="email">
+                                <path d="M 75.546 78.738 H 14.455 C 6.484 78.738 0 72.254 0 64.283 V 25.716 c 0 -7.97 6.485 -14.455 14.455 -14.455 h 61.091 c 7.97 0 14.454 6.485 14.454 14.455 v 38.567 C 90 72.254 83.516 78.738 75.546 78.738 z M 14.455 15.488 c -5.64 0 -10.228 4.588 -10.228 10.228 v 38.567 c 0 5.64 4.588 10.229 10.228 10.229 h 61.091 c 5.64 0 10.228 -4.589 10.228 -10.229 V 25.716 c 0 -5.64 -4.588 -10.228 -10.228 -10.228 H 14.455 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(29,29,27); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                <path d="M 11.044 25.917 C 21.848 36.445 32.652 46.972 43.456 57.5 c 2.014 1.962 5.105 -1.122 3.088 -3.088 C 35.74 43.885 24.936 33.357 14.132 22.83 C 12.118 20.867 9.027 23.952 11.044 25.917 L 11.044 25.917 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(29,29,27); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                <path d="M 46.544 57.5 c 10.804 -10.527 21.608 -21.055 32.412 -31.582 c 2.016 -1.965 -1.073 -5.051 -3.088 -3.088 C 65.064 33.357 54.26 43.885 43.456 54.412 C 41.44 56.377 44.529 59.463 46.544 57.5 L 46.544 57.5 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(29,29,27); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                <path d="M 78.837 64.952 c -7.189 -6.818 -14.379 -13.635 -21.568 -20.453 c -2.039 -1.933 -5.132 1.149 -3.088 3.088 c 7.189 6.818 14.379 13.635 21.568 20.453 C 77.788 69.973 80.881 66.89 78.837 64.952 L 78.837 64.952 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(29,29,27); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                <path d="M 14.446 68.039 c 7.189 -6.818 14.379 -13.635 21.568 -20.453 c 2.043 -1.938 -1.048 -5.022 -3.088 -3.088 c -7.189 6.818 -14.379 13.635 -21.568 20.453 C 9.315 66.889 12.406 69.974 14.446 68.039 L 14.446 68.039 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(29,29,27); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                            </symbol>
+                            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="fbm">
+                                <path d="M 45 0 C 20.147 0 0 20.147 0 45 c 0 9.144 2.735 17.645 7.42 24.746 L 0 89.474 l 19.536 -7.375 C 26.778 87.079 35.547 90 45 90 c 24.853 0 45 -20.147 45 -45 C 90 20.147 69.853 0 45 0 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,132,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                <polygon points="17.4,57.49 41.27,32.51 52.83,43.7 72.6,33.62 50.78,57.49 38.47,45.93 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+                            </symbol>
                             <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="in">
                                 <path d="M3.703 20.094h3.61V9.25h-3.61v10.844zM7.547 5.906C7.53 4.844 6.766 4.031 5.53 4.031c-1.234 0-2.047.813-2.047 1.875 0 1.031.782 1.875 2 1.875H5.5c1.266 0 2.047-.844 2.047-1.875zm9.14 14.188h3.61v-6.219C20.297 10.547 18.516 9 16.14 9c-1.938 0-2.797 1.078-3.266 1.828h.031V9.25h-3.61s.048 1.016 0 10.844h3.61V14.03c0-.312.016-.64.11-.875.265-.64.859-1.312 1.859-1.312 1.297 0 1.813.984 1.813 2.453v5.797zM24 4.5v15c0 2.484-2.016 4.5-4.5 4.5h-15A4.501 4.501 0 010 19.5v-15C0 2.016 2.016 0 4.5 0h15C21.984 0 24 2.016 24 4.5z"></path>
                             </symbol>
@@ -67,6 +79,7 @@
                         </a>
                     </li>
 				</ul>
+                <div class="burger-menu-overlay"></div>
     		</header>
     		<section class="parallax">
                 <!-- <img src="img/dev.jpeg" alt="">       -->
@@ -89,7 +102,19 @@
     		<section class="experience">
     			<h2>EXPERIENCE</h2>
     		</section>
-    	</div>
+    	
+        <footer class="footer">
+            <div class="contacts">
+                <span>Want to collaborate?</span>
+                <div>
+                    <span><a href='#'>Email me</a></span>
+                    <span><a href='#'>DM me</a></span>
+                </div>
+            </div>
+            2020, Tanya Bortnik
+        </footer>
+    </div>
+
 		<div class="box" style="display: none;">
 	    	<p class="en">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Et malesuada fames ac turpis egestas sed. Sit amet nisl suscipit adipiscing bibendum est ultricies. Et magnis dis parturient montes nascetur.</p>
 	    	<p class="ua">Фраза “Lorem ipsum” походить із трактату Цицерона de Finibus Bonorum et Malorum (Про межі добра та зла). Перекручену фразу “Lorem ipsum …” узято з тексту “Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit …”, що переводиться як “Ніхто не любить свій біль, ніхто не шукає його й ніхто не хоче його мати. Просто тому, що це біль…”. Це макетний текст, який використовувався з 1500-х років як заповнювач контенту. Замість того, щоб писати “свій контент” знову і знову, lorem ipsum забезпечує напів-нормальний розподіл слів і літер. Він використовується багатьма редакторами веб-сторінок в якості тексту за замовчуванням для моделей сайтів.</p>
@@ -102,16 +127,29 @@
 
 
 
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script type="text/javascript" src="js/burger.js"></script>
+        <!-- <script type="text/javascript" src="js/burger.js"></script> -->
 
-        <script src="js/skrollr.min.js"></script>
+        <!-- <script src="js/skrollr.min.js"></script> -->
 		<script>
-            var s = skrollr.init();
+            // var s = skrollr.init();
 			function darkToggle() {
 			   var element = document.getElementById("body");
 			   element.classList.toggle("dark-theme");
 			}
+
+            function menuToggle() {
+               var wrapper = document.getElementById("wrapper");
+               var body = document.getElementById("body");
+               wrapper.classList.toggle("menu-open");
+               if (wrapper.classList.contains('menu-open')) {
+                body.style.overflow = 'hidden';
+           } else {
+                body.style.overflow = 'visible';
+
+        }
+            }
 		</script>
 	</body> 
 </html>
