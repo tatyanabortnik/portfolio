@@ -9,7 +9,7 @@ body {
 	margin: 0;
 	background: $bg-color;
 	color: $text-color;
-	font: 20px "Source Serif Pro";
+	font: 20px "Source Serif Pro", serif;
 	
 }
 .btn {
@@ -30,6 +30,9 @@ body {
 .wrapper {
 	padding: $step;
 }
+
+
+
 .menu {
 	display: none;
 }
@@ -76,12 +79,30 @@ body {
 .links {
 	position: fixed;
 	top: 0;
-	right: 0;
+	right: 30px;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
+
+.sprite{
+	display: none;
+}
+
+.link-item{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.inline-svg-icon{
+     display: block;
+     width: 24px;
+     height: 24px;
+     fill: #75715E;
+     
+ }
+
 .info {
 	flex-grow: 1;
 	flex-basis: 50%;
@@ -128,6 +149,16 @@ header {
 		}
 	}
 }
+section {
+	h2{
+    	color: #5d5c61;
+    	font-size: 35px;
+   		font-family: mackay;
+    	font-weight: bold;
+    	margin-bottom: 30px;
+    	text-transform: uppercase;
+	}
+}
 
 .parallax{
 	/* The image used */
@@ -152,13 +183,7 @@ header {
 .skills{
 	background-color: #ebe2dc;
 	padding: 80px;
-	h2{
-    	color: #5d5c61;
-    	font-size: 42px;
-   		font-family: mackay;
-    	font-weight: bold;
-    	margin-bottom: 30px;
-	}
+	
 }
 
 
