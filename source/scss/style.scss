@@ -478,6 +478,9 @@ section {
 		    justify-content: center;
 		    padding-left: calc(16vw - 80px);
 		    opacity: 1;
+		    border-radius: 30px;
+		    border-right: 2px solid $brand-color;
+		    border-bottom: 2px solid $brand-color;
 
 		    ul{
 				display: block;
@@ -567,6 +570,13 @@ section {
 
 	.menu{
 		background-color: #c1bebf;
+		border-right: 2px solid $brand-color-dark;
+		border-bottom: 2px solid $brand-color-dark;
+		color: #151e25;
+
+		a{
+			color: #151e25;
+		}
 		
 	}
 
