@@ -4,7 +4,8 @@
         <title>Portfolio Markup Developer</title>
         <meta charset = "utf-8">
         <link rel="stylesheet" href="css/style.min.css">
-         <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
+        <!-- <link rel="stylesheet" href="css/style.css"> -->
+         <!-- <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/> -->
          <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Source+Serif+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     </head>
@@ -21,20 +22,31 @@
                   </a>
     			<nav class="menu">
     				<ul>
-    					<li><a href="">Skills</a></li>
-    					<li><a href="">Projects</a></li>
-    					<li><a href="">Experience</a></li>
+    					<li><a   href="#skills">Skills</a></li>
+    					<li><a href="#projects">Projects</a></li>
+    					<li><a href="#experience" >Experience</a></li>
     				</ul>
+                    <div class="contacts">
+                    <span>Want to collaborate?</span>
+                    <div>
+                        <span><a href='mailto:tatyanabortnik@gmail.com'>Email me</a></span>
+                        <span><a href="https://www.facebook.com/kasumi1kawai" target="_blank">DM me</a></span>
+                    </div>
+            </div>
     			</nav>
     			<div class="info">
     				<div class="info-text">
-	    				<date>since 2010</date>
-						<h2>Markup Developer</h2>
-						<p>Strong professional focus and personal interest to UI/UX design and Front-End engineering</p>
+	    				<date>since 2017</date>
+						<h2>Hi, I'm Tanya</h2>
+						<p>I make life on the web bright and colorful by bringing  
+                        UI/UX design and Front-End engineering together</p>
 					</div>	
     			</div>
     			<div class="hero">
-    				<strong class="hero-text">a markup developer's portfolio</strong>
+    				<strong class="hero-text">a markup developer's portfolio
+                        <!-- <button class='hover-btn'>Point at me</button> -->
+                    </strong>
+
     				<div class="decor"></div>
     			</div>
     			<ul class="links">
@@ -86,19 +98,27 @@
     		<section class="parallax">
                 <!-- <img src="img/dev.jpeg" alt="">       -->
             </section>
-    		<section class="skills">
+    		<section class="skills" id='skills'>
     			<h2>How well do I perform?</h2>
                 <div class='skills-area'>
-                    <p>HTML</p>
-                    <div><div class='skill-level' style="width:60%">60%</div></div>
-                    <p>CSS</p>
-                    <div><div class='skill-level' style="width:20%">20%</div></div>
+                    <p>HTML/CSS</p>
+                    <div><div class='skill-level' style="width:95%">95%</div></div>
                     <p>JS</p>
-                    <div><div class='skill-level' style="width:10%">10%</div></div>
+                    <div><div class='skill-level' style="width:30%">30%</div></div>
+                    <p>Responsive layout</p> 
+                    <div><div class='skill-level' style="width:90%">90%</div></div>
+                    <p>Bootstrap</p> 
+                    <div><div class='skill-level' style="width:60%">60%</div></div>
+                    <p>CSS Preprocessors</p> 
+                    <div><div class='skill-level' style="width:70%">70%</div></div>
+                    <p>Gulp</p>
+                    <div><div class='skill-level' style="width:60%">60%</div></div>
+                    <p>Git</p>    
+                    <div><div class='skill-level' style="width:70%">70%</div></div>             
                 </div>
 
     		</section>
-    		<section class="projects">
+    		<section class="projects" id='projects' name='projects'>
     			<h2>My latest creations</h2>
                 <div class='slick-slider'>
                     <div class="slide">
@@ -177,7 +197,7 @@
                                          
                 </div>
     		</section>
-    		<section class="experience">
+    		<section class="experience" id='experience'>
     			<h2>EXPERIENCE</h2>
                 <div>
                     <i>july 2017 - march 2018</i>
@@ -197,8 +217,8 @@
             <div class="contacts">
                 <span>Want to collaborate?</span>
                 <div>
-                    <span><a href='#'>Email me</a></span>
-                    <span><a href='#'>DM me</a></span>
+                    <span><a href='mailto:tatyanabortnik@gmail.com'>Email me</a></span>
+                    <span><a href="https://www.facebook.com/kasumi1kawai" target="_blank">DM me</a></span>
                 </div>
             </div>
             <i>2020, Tanya Bortnik</i>
@@ -221,7 +241,7 @@
         <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="js/slick/slick.min.js"></script>
         <script type="text/javascript" src="js/slick-settings.js"></script>
-        <!-- <script type="text/javascript" src="js/burger.js"></script> -->
+        <script type="text/javascript" src="js/smoothScroll.js"></script>
 
         <!-- <script src="js/skrollr.min.js"></script> -->
 		<script>
@@ -234,6 +254,7 @@
             function menuToggle() {
                var wrapper = document.getElementById("wrapper");
                var body = document.getElementById("body");
+               event.preventDefault();
                wrapper.classList.toggle("menu-open");
                if (wrapper.classList.contains('menu-open')) {
                 body.style.overflow = 'hidden';
