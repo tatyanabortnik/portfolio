@@ -2,6 +2,7 @@ $(document).ready(function(){
                 $('.slick-slider').slick({
                 	centerMode: true,
   					centerPadding: '20px',
+  					draggable:true,
 					 
 					  slidesToShow: 3,
 					  // slidesToScroll: 3,
